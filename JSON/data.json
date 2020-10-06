@@ -1,0 +1,61 @@
+{
+    "floor4" : [
+        { "room":"410", "name":"Dali"},
+        { "room":"415", "name":"Warhol"},
+        { "room":"417", "name":"Kubrick"},
+        { "room":"418", "name":"Kraftwerk"},
+        { "room":"419", "name":"Coppola"},
+        { "room":"429", "name":"Saville"},
+        { "room":"430", "name":""},
+        { "room":"432", "name":"Bowie"},
+        { "room":"433", "name":"Garbo"},
+        { "room":"434", "name":"Miller"}
+    ],
+    "floor5" : [
+        { "room":"505", "name":"Postel"},
+        { "room":"506", "name":"King"},
+        { "room":"509", "name":"Kahn"},
+        { "room":"511", "name":"Samus"},
+        { "room":"512", "name":""},
+        { "room":"513", "name":"Ericsson"},
+        { "room":"515", "name":""},
+        { "room":"522", "name":""},
+        { "room":"523", "name":"Allen"},
+        { "room":"525", "name":"Estring"},
+        { "room":"526", "name":"Pearlman"}
+    ],
+    "floor6" : [
+        { "room":"606", "name":"Newton"},
+        { "room":"607", "name":"Gates"},
+        { "room":"607A", "name":"Jobs"},
+        { "room":"609", "name":"Hopper"},
+        { "room":"610", "name":"Arkimedes"},
+        { "room":"611", "name":"Makerspace"},
+        { "room":"612", "name":"Da Vinci"},
+        { "room":"620A", "name":"Cerf"},
+        { "room":"620B", "name":"Silicon Valley"},
+        { "room":"622", "name":"Curie"},
+        { "room":"624", "name":"Ohm"}
+    ],
+    "annexet" : [
+        { "room":"A1", "name":"Mattesal"},
+        { "room":"A2", "name":""},
+        { "room":"A3", "name":"Mattesal"},
+        { "room":"A4", "name":"Fysiklabb"},
+        { "room":"A5", "name":"Kemilabb"},
+        { "room":"A6", "name":""},
+        { "room":"A7", "name":""},
+        { "room":"A8", "name":""},
+        { "room":"A9", "name":"Grupprum"},
+        { "room":"A10", "name":"Grupprum"}
+    ],
+    "övriga" : [
+        { "room":"", "name":"APL"},
+        { "room":"", "name":"Bibliotek"},
+        { "room":"", "name":"Dr Kristinas sal"},
+        { "room":"", "name":"Handels"},
+        { "room":"", "name":"Idrottshall"},
+        { "room":"", "name":"Musikhuset"},
+        { "room":"", "name":"Nordic Wellness"}
+    ]
+}

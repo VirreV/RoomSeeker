@@ -1,5 +1,5 @@
-{
-    "floor4" : [
+[
+    [
         { "room":"415", "name":"Warhol"},
         { "room":"417", "name":"Kubrick"},
         { "room":"410", "name":"Dali"},
@@ -11,7 +11,7 @@
         { "room":"433", "name":"Garbo"},
         { "room":"434", "name":"Miller"}
     ],
-    "floor5" : [
+    [
         { "room":"505", "name":"Postel"},
         { "room":"506", "name":"King"},
         { "room":"509", "name":"Kahn"},
@@ -24,7 +24,7 @@
         { "room":"525", "name":"Estring"},
         { "room":"526", "name":"Pearlman"}
     ],
-    "floor6" : [
+    [
         { "room":"606", "name":"Newton"},
         { "room":"607", "name":"Gates"},
         { "room":"607A", "name":"Jobs"},
@@ -37,7 +37,7 @@
         { "room":"622", "name":"Curie"},
         { "room":"624", "name":"Ohm"}
     ],
-    "annexet" : [
+    [
         { "room":"A1", "name":"Mattesal"},
         { "room":"A2", "name":""},
         { "room":"A3", "name":"Mattesal"},
@@ -49,13 +49,13 @@
         { "room":"A9", "name":"Grupprum"},
         { "room":"A10", "name":"Grupprum"}
     ],
-    "övriga" : [
-        { "room":"", "name":"APL"},
-        { "room":"", "name":"Bibliotek"},
-        { "room":"", "name":"Dr Kristinas sal"},
-        { "room":"", "name":"Handels"},
-        { "room":"", "name":"Idrottshall"},
-        { "room":"", "name":"Musikhuset"},
-        { "room":"", "name":"Nordic Wellness"}
+    [
+        { "room":"APL"},
+        { "room":"Bibliotek"},
+        { "room":"Dr Kristinas sal"},
+        { "room":"Handels"},
+        { "room":"Idrottshall"},
+        { "room":"Musikhuset"},
+        { "room":"Nordic Wellness"}
     ]
-}
+]

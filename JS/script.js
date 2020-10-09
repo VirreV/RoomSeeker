@@ -15,6 +15,14 @@ let SubmitFunc = function (event) {
 let roomSearch = document.querySelector("#form-search");
 roomSearch.addEventListener("submit", SubmitFunc, true);
 
+document.querySelector("#searchAlts").addEventListener('scroll', function(event)
+{
+    let element = event.target;
+    if (element.scrollHeight - element.scrollTop - element.clientHeight < 30) {
+        element.classList.add("scrolled");
+    } else element.classList.remove("scrolled");
+});
+
 fetch('DATA/data.json').then(response => response.json()).then(data => {
     document.querySelector("#txt-search").addEventListener("keyup", () => {
         let str = (document.querySelector("#txt-search").value);

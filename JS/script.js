@@ -41,9 +41,15 @@ fetch('DATA/data.json').then(response => response.json()).then(data => {
         let count = 0;
         data.forEach(element => {
             element.forEach(ele => {
-                if ((ele.room.substring(0, str.length).toLowerCase() == str.toLowerCase() || ele.name.substring(0, str.length).toLowerCase() == str.toLowerCase()) && str.length > 0) {
-                    AddDropDiv(ele.room, ele.name);
-                    count++;
+                if(str.length > 0){
+                    if (ele.room.substring(0, str.length).toLowerCase() == str.toLowerCase() || ele.name.substring(0, str.length).toLowerCase() == str.toLowerCase()) {
+                        AddDropDiv(ele.room, ele.name);
+                        count++;
+                    }
+                    else if(str == ":all"){
+                        AddDropDiv(ele.room, ele.name);
+                        count++;
+                    }
                 }
             });
         });

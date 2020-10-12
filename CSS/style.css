@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-    
 header{
     background: linear-gradient(-45deg, #DD0890 0, indigo 100%);
     color: white;
@@ -68,32 +67,59 @@ header #mapIcon:hover svg{
     overflow-y: scroll;
     max-height: 40vh;
     transition: 2s all ease-in-out;
+    background: rgba(148, 4, 137,.6);
 }
-#searchAlts:not(.scrolled){
-    background: linear-gradient(rgba(0,0,0,0) 85%, rgba(0,0,0,0.3) 100%);
+#overlap:not(.scrolled){
+    opacity: 100%;
 }
-#searchAlts.scrolled{
-    background: linear-gradient(rgba(0,0,0,0) 85%, rgba(0,0,0,0) 100%);
-}
+#overlap.scrolled{
+    opacity: 0%;
+} 
+
 #searchAlts::-webkit-scrollbar{
     width: 0.5em;
 }
 #searchAlts::-webkit-scrollbar-track{
-    background-color: white;
+    background-color:  white;
 }
 #searchAlts::-webkit-scrollbar-thumb{
-    background: rgba(148, 4, 137, 0.7);
+    background: rgba(148, 4, 137, 1);
     border-radius: 20px;
 }
 .searchAltsDiv{
     width: 100%;
     height: 6vh;
-    border: 1px solid rgba(0,0,0,0.2);
     box-sizing: border-box;
     line-height: calc(6vh + (-2px));
     transition: 0.2s;
+    font-family: soleto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.3vh;
+    padding-left: 30%;
+    padding-right: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
 }
 .searchAltsDiv:hover{
-    background: rgba(221,8,144,0.3);
-    border: 1px solid rgba(0,0,0,0);
+    background: rgba(148, 4, 137, 1);
+    color: white;
+    cursor: pointer;
+}
+#overlap{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    transition: 300ms ease-in-out;
+    background: linear-gradient( rgba(0, 0, 0, 0) 90%, rgba(255,255,255,1) 100%);
+}
+#searchAltsMainContainer{
+    width: 100%;
+    position: relative;
 }

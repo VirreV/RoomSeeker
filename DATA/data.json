@@ -50,12 +50,12 @@
         { "room":"A10", "name":"Grupprum"}
     ],
     [
-        { "room":"APL"},
-        { "room":"Bibliotek"},
-        { "room":"Dr Kristinas sal"},
-        { "room":"Handels"},
-        { "room":"Idrottshall"},
-        { "room":"Musikhuset"},
-        { "room":"Nordic Wellness"}
+        { "room":"APL", "name":""},
+        { "room":"Bibliotek", "name":""},
+        { "room":"Dr Kristinas sal", "name":""},
+        { "room":"Handels", "name":""},
+        { "room":"Idrottshall", "name":""},
+        { "room":"Musikhuset", "name":""},
+        { "room":"Nordic Wellness", "name":""}
     ]
 ]

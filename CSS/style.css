@@ -123,3 +123,30 @@ header #mapIcon:hover svg{
     max-width: 45vw;
     max-height: 60vh;
 }
+
+@media screen and (max-width: 500px){
+    .searchBox{
+        width: 80vw;
+        border-radius: 2vw;
+    }   
+    #contentContainer{
+        flex-direction: column;
+        justify-content: start;
+        margin: 9vh 8vw;
+    }
+    #searchAlts{
+        max-height: 40vh;
+        padding: 2.5vw 2.5vw 0;
+        background: white;
+        border-radius: 1.5vw;
+    }
+    .searchAltsDiv{
+        font-size: 3.2vh;
+        border-radius: 1.2vw;
+        margin-bottom: 2vw;
+    }
+    .mapImg{
+        max-width: 90vw;
+        max-height: 60vh;
+    }
+}

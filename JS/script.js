@@ -24,6 +24,7 @@ function AddDropDiv(roomNr, nameStr, floor) {
         img.className = "mapImg";
         ele.appendChild(img);
         document.querySelector("#contentContainer").appendChild(ele);
+        window.scrollTo(0,document.body.scrollHeight);
     });
     dropListDiv.appendChild(d);
     console.log(roomNr, nameStr, floor);

@@ -1,18 +1,33 @@
 let dropListDiv = document.querySelector("#searchAlts");
-function AddDropDiv(roomNr, nameStr) {
+function AddDropDiv(roomNr, nameStr, floor) {
     let d = document.createElement("div");
     d.className = "searchAltsDiv";
     let room = document.createElement("div");
     room.innerHTML = roomNr;
+    room.classList.add("room");
+    room.classList.add(floor);
+    room.id = roomNr;
     let name = document.createElement("div");
     name.innerHTML = nameStr;
+    name.className = "name";
     d.appendChild(room);
     d.appendChild(name);
+    d.addEventListener("click", () => {
+        console.log(d.querySelector(".room").id);
+        let mapEle = !!document.querySelector(".mapImg");
+        if (mapEle) {
+            document.querySelector(".mapImg").parentElement.remove();
+        }
+        let ele = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = "IMG/Planlösning" + floor + ".png";
+        img.className = "mapImg";
+        ele.appendChild(img);
+        document.querySelector("#contentContainer").appendChild(ele);
+    });
     dropListDiv.appendChild(d);
-    console.log(roomNr, nameStr);
+    console.log(roomNr, nameStr, floor);
     let refDiv = document.querySelector("#searchAlts");
-    let overlapDiv = document.querySelector("#overlap");
-    overlapDiv.style.height = refDiv.style.height;
 }
 
 let SubmitFunc = function (event) {
@@ -23,17 +38,6 @@ let SubmitFunc = function (event) {
 let roomSearch = document.querySelector("#form-search");
 roomSearch.addEventListener("submit", SubmitFunc, true);
 
-document.querySelector("#searchAlts").addEventListener('scroll', function(event)
-{
-    CheckScroll(event.target);
-});
-
-function CheckScroll(element){
-    if (element.scrollHeight - element.scrollTop - element.clientHeight < 30) {
-        document.querySelector("#overlap").classList.add("scrolled");
-    }else document.querySelector("#overlap").classList.remove("scrolled");
-}
-
 fetch('DATA/data.json').then(response => response.json()).then(data => {
     document.querySelector("#txt-search").addEventListener("keyup", () => {
         let str = (document.querySelector("#txt-search").value);
@@ -43,24 +47,21 @@ fetch('DATA/data.json').then(response => response.json()).then(data => {
             element.forEach(ele => {
                 if(str.length > 0){
                     if (ele.room.substring(0, str.length).toLowerCase() == str.toLowerCase() || ele.name.substring(0, str.length).toLowerCase() == str.toLowerCase()) {
-                        AddDropDiv(ele.room, ele.name);
+                        AddDropDiv(ele.room, ele.name, ele.floor);
                         count++;
                     }
-                    else if(str == ":all"){
-                        AddDropDiv(ele.room, ele.name);
+                    else if (str == ":all") {
+                        AddDropDiv(ele.room, ele.name, ele.floor);
                         count++;
                     }
                 }
             });
         });
         if (count == 0) {
-            document.querySelector(".searchBox").classList.remove("dropActive");
-        } else if (!document.querySelector(".searchBox").classList.contains("dropActive")) {
-            document.querySelector(".searchBox").classList.add("dropActive");
+            document.querySelector("#searchAlts").classList.remove("dropActive");
+        } else if (!document.querySelector("#searchAlts").classList.contains("dropActive")) {
+            document.querySelector("#searchAlts").classList.add("dropActive");
         }
         console.log(document.querySelector("#searchAlts").childElementCount);
-        if(document.querySelector("#searchAlts").childElementCount < 7){
-            document.querySelector("#overlap").classList.add("scrolled");
-        } else CheckScroll(document.querySelector("#searchAlts"));
     })
 });

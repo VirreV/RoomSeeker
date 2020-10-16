@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: rgb(224, 215, 201);
+}
+
 header{
     background: linear-gradient(-45deg, #DD0890 0, indigo 100%);
     color: white;
     padding: 2vw;
     box-sizing: border-box;
-    box-shadow: rgba(148, 4, 137, 0.5) 0px 20px 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -40,47 +43,39 @@ header #mapIcon:hover svg{
     transform: rotateY(180deg);
 }
 .searchContainer{
-    margin-top: 15vh;
-    position: absolute;
-    left: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translate(-50%, 0%);
+    height: 62vh;
 }
 .searchBox{
-    width: 60vw;
-    border: 0.5vw solid #940489;
-    border-radius: 1.5vw;
-    padding: 1vw;
+    width: 30vw;
+    border-radius: 0.8vw;
+    padding: 1.5vw;
     font-style: normal;
     font-weight: 700;
-    font-size: 4rem;
-    color: #AB058B;
+    font-size: 3rem;
+    color: black;
     outline: none;
+    border: none;
+    margin-bottom: 1vw;
 }
-.dropActive{
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+#searchAlts:not(.dropActive){
+    display: none;
 }
 #searchAlts{
     overflow-y: scroll;
-    max-height: 40vh;
-    transition: 2s all ease-in-out;
-    background: rgba(148, 4, 137,.6);
+    max-height: 48vh;
+    box-sizing: border-box;
+    padding: 1.3vw 1vw 0;
+    background: white;
+    border-radius: 0.8vw;
 }
-#overlap:not(.scrolled){
-    opacity: 100%;
-}
-#overlap.scrolled{
-    opacity: 0%;
-} 
-
 #searchAlts::-webkit-scrollbar{
     width: 0.5em;
 }
 #searchAlts::-webkit-scrollbar-track{
-    background-color:  white;
+    background-color: transparent;
 }
 #searchAlts::-webkit-scrollbar-thumb{
     background: rgba(148, 4, 137, 1);
@@ -88,38 +83,43 @@ header #mapIcon:hover svg{
 }
 .searchAltsDiv{
     width: 100%;
-    height: 6vh;
     box-sizing: border-box;
-    line-height: calc(6vh + (-2px));
     transition: 0.2s;
     font-family: soleto, sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 2.3vh;
-    padding-left: 30%;
-    padding-right: 30%;
+    font-weight: 400;
+    font-size: 2vh;
+    padding: 0.8vw 1.5vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     color: black;
+    background: rgb(233, 228, 218);
+    border-radius: .4vw;
+    margin-bottom: 1vw;
 }
 .searchAltsDiv:hover{
-    background: rgba(148, 4, 137, 1);
+    background: rgb(148, 4, 137);
     color: white;
     cursor: pointer;
-}
-#overlap{
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    pointer-events: none;
-    transition: 300ms ease-in-out;
-    background: linear-gradient( rgba(0, 0, 0, 0) 90%, rgba(255,255,255,1) 100%);
+    border: none;
 }
 #searchAltsMainContainer{
     width: 100%;
     position: relative;
+}
+.room{
+    min-width: 5vw;
+    margin-right: 1vw;
+}
+#contentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 9vh 8vw;
+}
+.mapImg{
+    max-width: 45vw;
+    max-height: 60vh;
 }

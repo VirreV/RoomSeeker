@@ -1,15 +1,15 @@
 [
     [
-        { "room":"410", "name":"Dali", "floor":"4"},
-        { "room":"415", "name":"Warhol", "floor":"4"},
-        { "room":"417", "name":"Kubrick", "floor":"4"},
-        { "room":"418", "name":"Kraftwerk", "floor":"4"},
-        { "room":"419", "name":"Coppola", "floor":"4"},
-        { "room":"429", "name":"Saville", "floor":"4"},
-        { "room":"430", "name":"", "floor":"4"},
-        { "room":"432", "name":"Bowie", "floor":"4"},
-        { "room":"433", "name":"Garbo", "floor":"4"},
-        { "room":"434", "name":"Miller", "floor":"4"}
+        { "room":"410", "name":"Dali", "floor":"4", "x":"0.326", "y":"0.395"},
+        { "room":"415", "name":"Warhol", "floor":"4", "x":"0.442", "y":"0.395"},
+        { "room":"417", "name":"Kubrick", "floor":"4", "x":"0.641", "y":"0.395"},
+        { "room":"418", "name":"Kraftwerk", "floor":"4", "x":"0.718", "y":"0.395"},
+        { "room":"419", "name":"Coppola", "floor":"4", "x":"0.779", "y":"0.395"},
+        { "room":"429", "name":"Saville", "floor":"4", "x":"0.731", "y":"0.260"},
+        { "room":"430", "name":"", "floor":"4", "x":"0.661", "y":"0.260"},
+        { "room":"432", "name":"Bowie", "floor":"4", "x":"0.583", "y":"0.260"},
+        { "room":"433", "name":"Garbo", "floor":"4", "x":"0.507", "y":"0.260"},
+        { "room":"434", "name":"Miller", "floor":"4", "x":"0.396", "y":"0.260"}
     ],
     [
         { "room":"505", "name":"Postel", "floor":"5"},
@@ -51,8 +51,8 @@
     ],
     [
         { "room":"APL", "name":"", "floor":"0"},
-        { "room":"Bibliotek", "name":"", "floor":"4"},
-        { "room":"Dr Kristinas sal", "name":"", "floor":"4"},
+        { "room":"Bibliotek", "name":"", "floor":"4", "x":"0.217", "y":"0.632"},
+        { "room":"Dr Kristinas sal", "name":"", "floor":"4", "x":"0.119", "y":"0.681"},
         { "room":"Handels", "name":"", "floor":"0"},
         { "room":"Idrottshall", "name":"", "floor":"0"},
         { "room":"Musikhuset", "name":"", "floor":"0"},

@@ -1,5 +1,5 @@
 let dropListDiv = document.querySelector("#searchAlts");
-function AddDropDiv(roomNr, nameStr, floor) {
+function AddDropDiv(roomNr, nameStr, floor, xp, yp) {
     let d = document.createElement("div");
     d.className = "searchAltsDiv";
     let room = document.createElement("div");
@@ -16,14 +16,31 @@ function AddDropDiv(roomNr, nameStr, floor) {
         console.log(d.querySelector(".room").id);
         let mapEle = !!document.querySelector(".mapImg");
         if (mapEle) {
-            document.querySelector(".mapImg").parentElement.remove();
+            document.querySelector("#mapContainer").parentElement.remove();
         }
+        let cont = document.createElement("div");
         let ele = document.createElement("div");
         let img = document.createElement("img");
+        ele.id = "mapContainer";
         img.src = "IMG/Planlösning" + floor + ".png";
         img.className = "mapImg";
+        let dot = document.createElement("div");
+        if(xp != null){
+            dot.className = "dot";
+            dot.style.top = yp*100 + "%";
+            dot.style.left = xp*100 + "%";
+        }
+        let showRoomDiv = document.createElement("div");
+        showRoomDiv.innerHTML = "Room: " + roomNr;
+        if(nameStr != ""){
+            showRoomDiv.innerHTML += "/" + nameStr;
+        }
+        showRoomDiv.className = "roomName";
+        cont.appendChild(showRoomDiv);
         ele.appendChild(img);
-        document.querySelector("#contentContainer").appendChild(ele);
+        ele.appendChild(dot);
+        cont.appendChild(ele);
+        document.querySelector("#contentContainer").appendChild(cont);
         window.scrollTo(0,document.body.scrollHeight);
     });
     dropListDiv.appendChild(d);
@@ -48,12 +65,40 @@ fetch('DATA/data.json').then(response => response.json()).then(data => {
             element.forEach(ele => {
                 if(str.length > 0){
                     if (ele.room.substring(0, str.length).toLowerCase() == str.toLowerCase() || ele.name.substring(0, str.length).toLowerCase() == str.toLowerCase()) {
-                        AddDropDiv(ele.room, ele.name, ele.floor);
+                        AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
                         count++;
                     }
                     else if (str == ":all") {
-                        AddDropDiv(ele.room, ele.name, ele.floor);
+                        AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
                         count++;
+                    }
+                    else if(str.substring(0, 6).toLowerCase() == "floor:"){
+                        switch(str.substring(7,8)){
+                            case "4":
+                                if(ele.floor == "4"){
+                                    AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
+                                    count++;
+                                }
+                                break;
+                            case "5":
+                                if(ele.floor == "5"){
+                                    AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
+                                    count++;
+                                }
+                                break;
+                            case "6":
+                                if(ele.floor == "6"){
+                                    AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
+                                    count++;
+                                }
+                                break;
+                            case "0":
+                                if(ele.floor == "0"){
+                                    AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
+                                    count++;
+                                }
+                                break;
+                        }
                     }
                 }
             });

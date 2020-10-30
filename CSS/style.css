@@ -174,4 +174,8 @@ header #mapIcon:hover svg{
         max-width: 90vw;
         max-height: 60vh;
     }
+    .dot{
+        width: 10px;
+        height: 10px;
+    }
 }

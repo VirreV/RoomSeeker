@@ -73,7 +73,7 @@ fetch('DATA/data.json').then(response => response.json()).then(data => {
                         count++;
                     }
                     else if(str.substring(0, 6).toLowerCase() == "floor:"){
-                        switch(str.substring(7,8)){
+                        switch(str.substring(7,8).toLowerCase()){
                             case "4":
                                 if(ele.floor == "4"){
                                     AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
@@ -94,6 +94,12 @@ fetch('DATA/data.json').then(response => response.json()).then(data => {
                                 break;
                             case "0":
                                 if(ele.floor == "0"){
+                                    AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
+                                    count++;
+                                }
+                                break;
+                            case "a":
+                                if(ele.floor.toLowerCase() == "a"){
                                     AddDropDiv(ele.room, ele.name, ele.floor, ele.x, ele.y);
                                     count++;
                                 }

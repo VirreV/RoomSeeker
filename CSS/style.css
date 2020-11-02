@@ -158,7 +158,7 @@ header #mapIcon:hover svg{
 #infoContainer iframe{
     overflow-y: scroll;
     width: 640px;
-    height: 1700px;
+    height: 2000px;
 }
 h2{
     font-family: soleto, sans-serif;

@@ -156,9 +156,9 @@ header #mapIcon:hover svg{
     align-items: center;
 }
 #infoContainer iframe{
-    overflow-y: scroll;
     width: 640px;
-    height: 2000px;
+    height: 1700px;
+    max-width: 95vw;
 }
 h2{
     font-family: soleto, sans-serif;
@@ -168,7 +168,11 @@ h2{
     padding: 20px;
     text-align: center;
 }
-
+@media screen and (max-width: 712px){
+    #infoContainer iframe{
+        height: 2500px;
+    }
+}
 @media screen and (max-width: 500px){
     .searchBox{
         width: 80vw;

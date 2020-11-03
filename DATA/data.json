@@ -56,6 +56,7 @@
         { "room":"Handels", "name":"", "floor":"0"},
         { "room":"Idrottshall", "name":"", "floor":"0"},
         { "room":"Musikhuset", "name":"", "floor":"0"},
-        { "room":"Nordic Wellness", "name":"", "floor":"0"}
+        { "room":"Nordic Wellness", "name":"", "floor":"0"},
+        { "room":"Café", "name":"Valkyria", "floor":"4", "x":"0.210", "y":"0.787"}
     ]
 ]

@@ -38,25 +38,18 @@
         { "room":"624", "name":"Ohm", "floor":"6", "x":"0.300", "y":"0.200"}
     ],
     [
-        { "room":"A1", "name":"Mattesal", "floor":"A"},
-        { "room":"A2", "name":"", "floor":"A"},
-        { "room":"A3", "name":"Mattesal", "floor":"A"},
-        { "room":"A4", "name":"Fysiklabb", "floor":"A"},
-        { "room":"A5", "name":"Kemilabb", "floor":"A"},
-        { "room":"A6", "name":"", "floor":"A"},
-        { "room":"A7", "name":"", "floor":"A"},
-        { "room":"A8", "name":"", "floor":"A"},
-        { "room":"A9", "name":"Grupprum", "floor":"A"},
-        { "room":"A10", "name":"Grupprum", "floor":"A"}
+        { "room":"A1", "name":"Mattesal", "floor":"A", "x":"0.504", "y":"0.546"},
+        { "room":"A2", "name":"", "floor":"A", "x":"0.413", "y":"0.546"},
+        { "room":"A3", "name":"Mattesal", "floor":"A", "x":"0.308", "y":"0.546"},
+        { "room":"A4", "name":"Fysiklabb", "floor":"A", "x":"0.198", "y":"0.546"},
+        { "room":"A5", "name":"Kemilabb", "floor":"A", "x":"0.090", "y":"0.546"},
+        { "room":"A6", "name":"", "floor":"A", "x":"0.195", "y":"0.273"},
+        { "room":"A7", "name":"", "floor":"A", "x":"0.309", "y":"0.273"},
+        { "room":"A8", "name":"", "floor":"A", "x":"0.415", "y":"0.273"}
     ],
     [
-        { "room":"APL", "name":"", "floor":"0"},
         { "room":"Bibliotek", "name":"", "floor":"4", "x":"0.217", "y":"0.632"},
         { "room":"Dr Kristinas sal", "name":"", "floor":"4", "x":"0.119", "y":"0.681"},
-        { "room":"Handels", "name":"", "floor":"0"},
-        { "room":"Idrottshall", "name":"", "floor":"0"},
-        { "room":"Musikhuset", "name":"", "floor":"0"},
-        { "room":"Nordic Wellness", "name":"", "floor":"0"},
         { "room":"Café", "name":"Valkyria", "floor":"4", "x":"0.210", "y":"0.787"}
     ]
 ]
